@@ -94,7 +94,7 @@ newArray.push(formObject);
 localStorage.setItem("courierRequest",JSON.stringify(newArray));
 }
 courierFormValue.reset();
-location.replace(true);
+location.reload();
 })
 
 // getting from local storage
@@ -162,7 +162,7 @@ const getlocalValue=localStorage.getItem("courierRequest");
 const parsedlocalValue=JSON.parse(getlocalValue);
 const filtered=parsedlocalValue.filter((e)=>e.id!=courierID);
 localStorage.setItem("courierRequest",JSON.stringify(filtered));
-location.replace(true);
+location.reload();
  }
 
   

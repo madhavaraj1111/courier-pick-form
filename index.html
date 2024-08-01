@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Courier pick up application for courier services"
+    />
+    <meta
+      property="og:description"
+      content="We make your things to travel across the country and deliver to the destination"
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.pixabay.com/photo/2024/02/26/14/13/box-8598084_640.jpg"
+    />
+    <title>Courier pick form</title>
+    <!--style link -->
+    <link rel="stylesheet" href="./assets/main.css" />
+  </head>
+  <body class="bg-slate-800">
+    <!-- form -->
+    <form class="bg-white max-w-lg mx-auto mt-10 rounded p-5" id="courier-form">
+      <h3 class="font-semibold text-lg pb-2">Courier pick form</h3>
+      <div>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <input
+              type="text"
+              name="name"
+              class="form-input"
+              placeholder="Name"
+              id="name-input"
+              required
+            />
+          </div>
+
+          <div>
+            <input
+              type="number"
+              name="number"
+              id="number-input"
+              class="form-input"
+              min="0"
+              placeholder="Phone number"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <label
+            for="datetime-input"
+            class="text-sm bg-gray-200 p-1 rounded text-gray-400"
+            >Date&Time</label
+          >
+          <input
+            name="datetime"
+            type="datetime-local"
+            class="form-input"
+            id="datetime-input"
+            required
+          />
+        </div>
+        <div>
+          <textarea
+            id="address-input"
+            name="address"
+            class="form-input resize-none"
+            rows="5"
+            placeholder="Enter your address here!"
+            required
+          ></textarea>
+        </div>
+        <div class="my-3">
+          <label for="agree" class="flex items-center text-sm gap-1"
+            ><input type="checkbox" id="agree" class="w-4 h-4" required />I
+            agree to the terms&conditions</label
+          >
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2 bg-rose-700 text-white rounded w-full hover:bg-rose-800 font-medium text-sm"
+        >
+          Pick up
+        </button>
+      </div>
+    </form>
+    <!-- Details -->
+    <div
+      class="bg-white max-w-5xl overflow-auto max-sm:w-80 w-fit mx-auto mt-10 rounded p-5 hidden"
+      id="tableDivision"
+    >
+      <div class="mb-2 font-semibold text-xl">
+        Courier Requests :
+        <span
+          class="bg-green-500 text-white text-sm rounded-full px-2 py-0.5"
+          id="recordLength"
+        ></span>
+      </div>
+      <table class="table-fixed border text-center">
+        <tr>
+          <th class="border px-1 max-sm:p-1 py-2 max-sm:text-xs">C.No</th>
+          <th class="border p-1 max-sm:text-xs text-center">Customer</th>
+          <th class="border p-2 max-sm:text-xs">Phone</th>
+          <th class="border p-2 max-sm:text-xs">Date</th>
+          <th class="border p-2 max-sm:text-xs">Address</th>
+          <th class="w-20 border p-2 max-sm:text-xs max-sm:w-auto"></th>
+        </tr>
+        <tbody id="tableDataId"></tbody>
+      </table>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
